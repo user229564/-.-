@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr><td>編號</td><td>顧客</td><td>商品</td><td>價格</td>
+        <td>數量</td><td>總計</td></tr>
+     {% for i in orderlist %}
+     <form action="/complete/"method="GET">
+     <tr>
+      <td><input type="hidden" name="id" value="{{i.0}}">{{i.0}} </td>
+      <td><input type="hidden" name="account" value="{{i.1}}">{{i.1}} </td>
+      <td><input type="hidden" name="dish" value="{{i.2}}">{{i.2}} </td>
+      <td><input type="hidden" name="price" value="{{i.3}}">{{i.3}} </td>
+      <td><input type="hidden" name="number" value="{{i.4}}">{{i.4}} </td>
+      <td><input type="hidden" name="total" value="{{i.5}}">{{i.5}} </td>
+      <td>
+        <input type="submit"value="完成"> </td></form>
+        
+     {% endfor %}
+    
+</body>
+</html>

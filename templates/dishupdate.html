@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>添加商品</h1>
+    <div style="float:left;width:50%">
+        <form action="/dishupdate/" method="POST">
+        {% csrf_token %}
+        商品:<input type="text"name="dish"> 
+        價格:<input type="number"name="price">
+        <input type="submit"value="加入">
+        </form></div>
+    <div style="float:left;width:50%">
+    <h1>回首頁</h1>
+    <a href="/cover/">cover</a></div>
+    
+</body>
+</html>
